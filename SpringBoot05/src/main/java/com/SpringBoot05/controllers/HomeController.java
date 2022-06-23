@@ -45,9 +45,17 @@ public class HomeController {
 	
 	@ResponseBody
 	@RequestMapping("/test5")
-	public ResponseEntity<String> getGreetingWithResponseEntity2(){
+	public ResponseEntity<String> getWithResponseEntity300(){
 		final HttpHeaders httpHeaders = new HttpHeaders();
 		httpHeaders.setContentType(MediaType.APPLICATION_JSON);
 		return new ResponseEntity<String>("{\"page\": \"index.html\"}",httpHeaders,HttpStatus.MULTIPLE_CHOICES);
+	}
+	
+	@ResponseBody
+	@RequestMapping("/test6")
+	public ResponseEntity<String> getWithResponseEntity400(){
+		final HttpHeaders httpHeaders = new HttpHeaders();
+		httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+		return new ResponseEntity<String>("{\"page\": \"index.html\"}",httpHeaders,HttpStatus.BAD_REQUEST);
 	}
 }
