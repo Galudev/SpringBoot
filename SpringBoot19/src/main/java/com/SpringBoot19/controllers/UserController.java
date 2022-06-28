@@ -53,22 +53,6 @@ public class UserController {
 		return user;
 	}
 
-	/*
-	 * @ApiResponses(value = { @ApiResponse(responseCode = "404", description =
-	 * "Not found - The product was not found") })
-	 * 
-	 * @RequestMapping(value = "/users/{id}", method = { RequestMethod.GET,
-	 * RequestMethod.POST }) public ResponseEntity<User> getById(@PathVariable(name
-	 * = "id") Long id) { final String sql = "SELECT * FROM users WHERE id = " + id
-	 * + ";";
-	 * 
-	 * try { Map<String, Object> result = jdbcTemplate.queryForMap(sql); User user =
-	 * new User(); user = mapUserResult(result); return new
-	 * ResponseEntity<User>(user, HttpStatus.OK); } catch
-	 * (EmptyResultDataAccessException e) { return new
-	 * ResponseEntity<>(HttpStatus.NOT_FOUND); } catch (Exception e) { throw e; } }
-	 */
-
 	@ApiResponses(value = { @ApiResponse(responseCode = "404", description = "Not found - The product was not found") })
 	@RequestMapping(value = "/users/{id}", method = { RequestMethod.GET, RequestMethod.POST })
 	public ResponseEntity<User> getById(@PathVariable Long id) {
