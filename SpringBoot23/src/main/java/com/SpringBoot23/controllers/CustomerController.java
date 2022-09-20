@@ -26,7 +26,6 @@ public class CustomerController {
 	
 	@GetMapping(value="/customers")
 	public List<Customer> getCustomers(){
-		log.info("Request a http://localhost:PORT/api/customers (GET)");
 		return customerService.findAllCustomers();
 	}
 	
